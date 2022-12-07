@@ -211,7 +211,7 @@ const selectMenuChangeEventHandler = async (event) => {
     if (!event) return;
     const selectMenu = document.getElementById("selectMenu")
     selectMenu.disabled = true
-    const userId = event?.target?.value || 1;
+    const userId = event.target.value || 1;
     const postsJSON = await getUserPosts(userId)
     const refreshPostsArray = await refreshPosts(postsJSON)
     selectMenu.disabled = false
